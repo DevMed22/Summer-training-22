@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Login</title>
+{% endblock title %}
+{% block content %}
+<form method="post" class="loginform" style="margin-left:40%;margin-top:8%">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="login-btn" style=" background: #a5c422;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 5px ;
+    border-color: transparent;
+    "  type="submit" value="login">
+</form>
+
+{% endblock content %}
