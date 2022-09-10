@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 """
 class Appointment(models.Model):
     name = models.CharField(max_length=50)
@@ -18,7 +18,10 @@ class Appointment(models.Model):
 
 
 class Doctor(models.Model):
-    # username
+    username = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE
+    )
     name = models.CharField(max_length=255)
     birth_date = models.DateField()
     address = models.CharField(max_length=255)
@@ -31,6 +34,7 @@ class Doctor(models.Model):
         ('Dental', 'Dental'),
         ('Medical Research', 'Medical Research')
     ]
+    #isdoctor = models.BooleanField(default=True)
     department = models.CharField(max_length=150, choices=DEPARTMENTS)
 
     doc_pic = models.ImageField(default=None)
@@ -40,4 +44,4 @@ class Doctor(models.Model):
     # )
 
     def __str__(self):
-        return self.name
+        return str(self.username)
