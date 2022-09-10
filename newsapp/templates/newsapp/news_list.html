@@ -14,6 +14,13 @@
                     <h2>Latest News</h2>
                 </div>
             </div>
+
+            {% for username in doctors %}
+            {% if username|stringformat:"s" == user.username|stringformat:"s" %}
+            <a href="{% url 'story_create' %}">Post News</a>
+            {% endif %}
+            {% endfor %}
+            
             {% for new in news_list %}
             <div class="col-md-4 col-sm-6">
                 <!-- NEWS THUMB -->
@@ -37,6 +44,8 @@
                 </div>
             </div>
             {% endfor %}
+
+            
 
 
         </div>

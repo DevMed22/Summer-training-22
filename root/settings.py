@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',  # PAGES APP FOR STATIC PAGES
     'doctors.apps.DoctorsConfig',  # DOCTORS
     'newsapp.apps.NewsappConfig',  # NEWS
+    'accounts.apps.AccountsConfig',  # accounts
 ]
 
 MIDDLEWARE = [

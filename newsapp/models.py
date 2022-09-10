@@ -1,3 +1,4 @@
+from email.policy import default
 from pyexpat import model
 from re import T
 from tkinter.tix import Tree
@@ -10,8 +11,8 @@ from django.urls import reverse
 class News(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
-    pic = models.ImageField()
-    newsdate = models.DateField(null=True, blank=True)
+    pic = models.ImageField(default='news-image.jpg')
+    newsdate = models.DateField(auto_now_add=True, null=True, blank=True)
     docname = models.ForeignKey(
         Doctor, on_delete=models.CASCADE, null=True, blank=True)
 
