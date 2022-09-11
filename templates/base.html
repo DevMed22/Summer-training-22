@@ -20,6 +20,7 @@ http://www.tooplate.com/view/2098-health
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
      <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'style.css' %}">
      <link rel="stylesheet" href="{% static 'font-awesome.min.css' %}">
      <link rel="stylesheet" href="{% static 'animate.css' %}">
      <link rel="stylesheet" href="{% static 'owl.carousel.css' %}">
@@ -87,13 +88,25 @@ http://www.tooplate.com/view/2098-health
                          <li><a href="{% url 'doctors_list' %}" class="smoothScroll">Doctors</a></li>
                          <li><a href="{% url 'news' %}" class="smoothScroll">News</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li>
-                         <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li>
+
+                         {% for username in doctors %}
+                         {% if username|stringformat:"s" == user.username|stringformat:"s" %}
+                         <li class="appointment-btn"><a href="{% url 'story_create' %}">Make a new post</a></li>
+                         {% elif user.username|stringformat:"s" %}
+                         <li class="appointment-btn"><a href="{% url 'appointment_list' %}">My Appointments</a></li>
+                         <li class="appointment-btn"><a href="{% url 'makeappointment' %}">Make an appointment</a></li>
+                         {% endif %}
+                         {% endfor %}
+
+
                          {% if user.is_authenticated %}
                          <li class="appointment-btn"><a href="{% url 'logout' %}">Logout</a></li>
                          {% else %}
                          <li class="appointment-btn"><a href="{% url 'signup' %}">SignUp</a></li>
                          <li class="appointment-btn"><a href="{% url 'login' %}">Login</a></li>
                          {% endif %}
+
+
                     </ul>
                </div>
 
