@@ -3,6 +3,7 @@
 <title>Login</title>
 {% endblock title %}
 {% block content %}
+<h2 style="margin-left: 45%;">Login</h2>
 <form method="post" class="loginform" style="margin-left:40%;margin-top:8%">
 
     {% csrf_token %}
@@ -14,6 +15,7 @@
     padding: 5px ;
     border-color: transparent;
     " type="submit" value="login">
+    <a href="{% url 'password_reset' %}">Forget Password?</a>
 </form>
 
 {% endblock content %}

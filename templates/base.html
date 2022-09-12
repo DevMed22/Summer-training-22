@@ -87,7 +87,7 @@ http://www.tooplate.com/view/2098-health
                          <li><a href="{% url 'about' %}" class="smoothScroll">About Us</a></li>
                          <li><a href="{% url 'doctors_list' %}" class="smoothScroll">Doctors</a></li>
                          <li><a href="{% url 'news' %}" class="smoothScroll">News</a></li>
-                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+                         <li><a href="{% url 'contact:contact' %}" class="smoothScroll">Contact</a></li>
 
                          {% for username in doctors %}
                          {% if username|stringformat:"s" == user.username|stringformat:"s" %}
