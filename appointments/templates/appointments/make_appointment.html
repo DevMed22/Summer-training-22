@@ -1,12 +1,14 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% block title %}
 <title>Make Appointment</title>
 {% endblock title %}
 
 
 {% block content %}
+<h3 style="margin-left: 33%;">Make an Appointment</h3>
 <form method="post" id="appointmentform">{% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
     <input type="submit" value="submit">
 </form>
 {% endblock content %}

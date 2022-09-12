@@ -6,6 +6,6 @@
     <p>{{ object.department }}</p>
     <p>{{ object.phone }}</p>
     <p>{{ object.msg }}</p>
-</div><a href="{% url 'appointment_update' object.pk %}">+ Edit Appointment</a>
-</div><a href="{% url 'appointment_delete' object.pk %}">Delete Appointment</a>
+</div><a href="{% url 'appointment_update' object.pk %}" id="appupdate">+ Edit Appointment</a>
+</div><a href="{% url 'appointment_delete' object.pk %}" class="appdelete">Delete Appointment</a>
 {% endblock content %}
