@@ -1,3 +1,4 @@
 django
-pylint
 autopep8
+environ
+crispy-forms
