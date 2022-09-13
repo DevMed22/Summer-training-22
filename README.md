@@ -13,6 +13,6 @@ We have built a deep learning model to help us in .....
 We deployed our project and hosted it on Microsoft Azure and you can check the live version through this link(......)
 <br><br>
 We are using GitHub Actions to automate testing whenever new push or pull request are made to the main branch.
-you can find the workflow automation file inside this [directory]{https://github.com/DevMed22/Summer-training-22/tree/main/.github/workflows} .
+you can find the workflow automation file inside this [directory](https://github.com/DevMed22/Summer-training-22/tree/main/.github/workflows) .
 <br><br>
 install project requirements throgh file Requirements.txt 
