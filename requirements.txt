@@ -1,4 +1,6 @@
-django
+Django
+pylint
 autopep8
-environ
-crispy-forms
+django-crispy-forms
+whitenoise
+psycopg2-binary
