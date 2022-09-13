@@ -14,13 +14,13 @@ app = Flask(__name__)
 
 def predict_label(img_path):
     model = load_model('covid_vgg.h5')
-    image = load_img(img_path, target_size=(240, 320))
+    image = load_img(img_path, target_size=(224, 224))
     # convert the image pixels to a numpy array
     image = img_to_array(image)
     # reshape data for the model
-    # image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
+    image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
     # Expand dimentions only for vgg
-    image = np.expand_dims(image, axis=0)
+    #image = np.expand_dims(image, axis=0)
     # prepare the image for the VGG model only
     # image = preprocess_input(image)
     # predict the probability across all output classes
