@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
-{% block title %} <title>News</title> {% endblock title %}
+{% block title %}
+<title>Your Appointments</title>
+{% endblock title %}
+
+
 {% block content %}
 
-
-<!-- NEWS -->
 <section id="news" data-stellar-background-ratio="2.5">
     <div class="container">
         <div class="row">
@@ -11,28 +13,25 @@
             <div class="col-md-12 col-sm-12">
                 <!-- SECTION TITLE -->
                 <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                    <h2>Latest News</h2>
+                    <h2>Your Appointments</h2>
                 </div>
             </div>
 
-            
-            
-            {% for new in news_list %}
+
+            {% if appointment_list %}
+            {% for app in appointment_list %}
             <div class="col-md-4 col-sm-6">
                 <!-- NEWS THUMB -->
                 <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
-                    <a href="/">
-                        <img src="{{new.pic.url}}" class="img-responsive" alt="">
-                    </a>
                     <div class="news-info">
-                        <span>{{new.newsdate}}</span>
-                        <h3><a href="{{new.get_absolute_url }}">{{ new.title }}</a></h3>
-                        <p>{{ new.body }}</p>
+
+                        <h3><a href="{{ app.get_absolute_url }}">{{ app.department }}</a></h3>
+
                         <div class="author">
-                            <img src="{{ new.docname.doc_pic.url }}" class="img-responsive" alt="">
+
                             <div class="author-info">
-                                <h5>{{ new.docname.name }}</h5>
-                                <p>{{ new.docname.title }}</p>
+
+
 
                             </div>
                         </div>
@@ -41,13 +40,14 @@
             </div>
             {% endfor %}
 
-            
+            {% else %}
+            <h3>there is no appointments</h3>
+            {% endif %}
 
 
         </div>
     </div>
 </section>
-
 
 
 {% endblock content %}

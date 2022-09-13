@@ -1,0 +1,24 @@
+#formpost,
+#appointmentform {
+    margin-left: 33%;
+}
+
+#id_title {
+    margin-left: 6px;
+}
+
+#post {
+    background-color: #a5c422;
+    color: white;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 3px;
+}
+
+#appupdate {
+    background-color: #a5c422;
+    color: white;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 3px;
+}
