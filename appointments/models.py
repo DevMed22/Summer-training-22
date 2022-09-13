@@ -1,8 +1,11 @@
+from datetime import datetime
 from django.urls import reverse
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import date
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 
-# Create your models here.
 
 
 class Appointment(models.Model):
@@ -24,3 +27,4 @@ class Appointment(models.Model):
 
     def get_absolute_url(self):
         return reverse('appointment_detail', kwargs={'pk': self.pk})
+

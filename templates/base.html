@@ -88,13 +88,13 @@ http://www.tooplate.com/view/2098-health
                          <li><a href="{% url 'doctors_list' %}" class="smoothScroll">Doctors</a></li>
                          <li><a href="{% url 'news' %}" class="smoothScroll">News</a></li>
                          <li><a href="{% url 'contact:contact' %}" class="smoothScroll">Contact</a></li>
-
+                         <li class="appointment-btn"><a href="http://127.0.0.1:5000/">Covid-Checker</a></li>
                          {% for username in doctors %}
                          {% if username|stringformat:"s" == user.username|stringformat:"s" %}
                          <li class="appointment-btn"><a href="{% url 'story_create' %}">Make a new post</a></li>
                          {% elif user.username|stringformat:"s" %}
-                         <li class="appointment-btn"><a href="{% url 'appointment_list' %}">My Appointments</a></li>
                          <li class="appointment-btn"><a href="{% url 'makeappointment' %}">Make an appointment</a></li>
+                         <li class="appointment-btn"><a href="{% url 'appointment_list' %}">my appointments</a></li>
                          {% endif %}
                          {% endfor %}
 
