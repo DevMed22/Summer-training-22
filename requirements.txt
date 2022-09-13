@@ -3,8 +3,4 @@ pylint
 autopep8
 django-crispy-forms
 whitenoise
-<<<<<<< HEAD
 psycopg2-binary
-=======
-psycopg2-binary
->>>>>>> 2d0a01c752e72e786efece0962331b662ed6580b
