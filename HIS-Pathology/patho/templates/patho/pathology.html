@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Data Table area Start-->
+<div class="col s12">
+  <div>
+    <table border="1" class="table table-striped table-bordered table-hover ajaxlist dataTable no-footer"
+      data-export-title="Appointment Details" id="DataTables_Table_0" role="grid"
+      aria-describedby="DataTables_Table_0_info" style="width: 646px;">
+        <th role="row">
+          <td class="white-space-nowrap sorting" tabindex="0" aria-controls="testreport" rowspan="1" colspan="1"
+            style="width: 65px;" aria-label="Bill No: activate to sort column ascending">Bill No</td>
+          <td class="white-space-nowrap dt-body-center sorting" tabindex="0" aria-controls="testreport" rowspan="1"
+            colspan="1" style="width: 66px;" aria-label="Case ID: activate to sort column ascending">Case ID</td>
+          <td class="white-space-nowrap sorting" tabindex="0" aria-controls="testreport" rowspan="1" colspan="1"
+            style="width: 110px;" aria-label="Reporting Date: activate to sort column ascending">Reporting Date</td>
+          <td class="white-space-nowrap sorting" tabindex="0" aria-controls="testreport" rowspan="1" colspan="1"
+            style="width: 100px;" aria-label="Patient Name: activate to sort column ascending">Patient Name</td>
+          <td class="white-space-nowrap sorting" tabindex="0" aria-controls="testreport" rowspan="1" colspan="1"
+            style="width: 117px;" aria-label="Reference Doctor: activate to sort column ascending">Reference Doctor</td>
+          <td class="white-space-nowrap dt-body-right sorting" tabindex="0" aria-controls="testreport" rowspan="1"
+            colspan="1" style="width: 81px;" aria-label="Amount ($): activate to sort column ascending">Amount ($)</td>
+          <td class="white-space-nowrap dt-body-right sorting" tabindex="0" aria-controls="testreport" rowspan="1"
+            colspan="1" style="width: 120px;" aria-label="Paid Amount ($): activate to sort column ascending">Paid
+            Amount ($)</th>
+          <td class="text-right white-space-nowrap dt-body-right sorting_disabled" rowspan="1" colspan="1"
+            style="width: 120px;" aria-label="Balance Amount ($)">Balance Amount ($)</td>
+        </th>
+      <tbody>
+        {% if patient_list %}
+        {% for p in patient_list %}
+        <tr class="odd">
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.bill_no }}</td>
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.case_id }}</td>
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.reporting_date }}</td>
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.patient_name }}</td>
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.reference_doctor }}</td>
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.amount }}</td>
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.paid_amount }}</td>
+          <td valign="top" colspan="11" class="dataTables_empty">{{ p.balance_amount }}</td>
+
+        </tr>
+        {% endfor %}
+        {% else %}
+        <div align="center">No data available in table <br> <br><img
+            src="https://smart-hospital.in/shappresource/images/addnewitem.svg" width="150"><br><br> <span
+            class="text-success bolds"><i class="fa fa-arrow-left"></i> Add new record or search with different
+            criteria.</span>
+        </div>
+        {% endif %}
+      </tbody>
+  </div>
+</div>
+</section>
+<!-- Data Table area End-->
+
+{% endblock content %}
