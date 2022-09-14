@@ -20,6 +20,7 @@
 
             {% if appointment_list %}
             {% for app in appointment_list %}
+            {% if user.id == app.patient.id %}
             <div class="col-md-4 col-sm-6">
                 <!-- NEWS THUMB -->
                 <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
@@ -38,6 +39,7 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
 
             {% else %}

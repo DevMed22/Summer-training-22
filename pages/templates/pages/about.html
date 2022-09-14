@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} <title> About</title> {% endblock title %}
 
 {% block content %}
@@ -20,10 +20,10 @@
                                    placerat, diam a tempus vehicula.</p>
                          </div>
                          <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                              <img src="{{ STATIC_URL }}news-image.jpg" class="img-responsive" alt="#">
+                              <img src="{% static 'news-image.jpg' %}" class="img-responsive" alt="#">
                               <figcaption>
                                    <h3>Dr. Neil Jackson</h3>
-                                   
+
                                    <p>General Principal</p>
                               </figcaption>
                          </figure>

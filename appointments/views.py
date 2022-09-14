@@ -5,6 +5,10 @@ from .forms import AppointmentForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
+from datetime import date
+today = date.today()
+from datetime import datetime
+now = datetime.now()
 
 class MakeAppointment(LoginRequiredMixin, CreateView):
     model = Appointment
@@ -14,6 +18,8 @@ class MakeAppointment(LoginRequiredMixin, CreateView):
 
     def post(self, request):
         form = self.get_form()
+        if(request.POST['date'] < datetime.now()):
+                raise ("date can't be in the past")
         if form.is_valid():
             self.model = form.save(commit=False)
             patient = User.objects.all()
