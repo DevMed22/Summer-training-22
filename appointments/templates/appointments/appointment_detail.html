@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="post-entry">
+<div style="margin-left: 33%;" class="post-entry">
+
+    <h2>Your appointment details</h2>
     <h2>{{ object.date }}</h2>
     <p>{{ object.department }}</p>
     <p>{{ object.phone }}</p>
     <p>{{ object.msg }}</p>
-</div><a href="{% url 'appointment_update' object.pk %}" id="appupdate">+ Edit Appointment</a>
+</div><a style="margin-left: 33%;" href="{% url 'appointment_update' object.pk %}" id="appupdate">+ Edit Appointment</a>
 </div><a href="{% url 'appointment_delete' object.pk %}" class="appdelete">Delete Appointment</a>
 {% endblock content %}

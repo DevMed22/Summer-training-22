@@ -1,13 +1,14 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% block title %}
 <title>Create Story</title>
 {% endblock title %}
 
 
 {% block content %}
-<form method="post" enctype="multipart/form-data" id="formpost">
+<form style="margin-left: 33%;" method="post" enctype="multipart/form-data" id="formpost">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
 
     <input type="submit" value="Post" id="post">
 </form>

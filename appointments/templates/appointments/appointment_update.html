@@ -1,12 +1,14 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% block title %}
 <title>Update Appointment</title>
 {% endblock title %}
 
 
 {% block content %}
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
+<h2 style="margin-left: 33%;">Update Your appointment</h2>
+<form style="margin-left: 33%;" method="post">{% csrf_token %}
+    {{ form|crispy }}
     <input type="submit" value="update">
 </form>
 {% endblock content %}
