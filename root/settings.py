@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import environ
+# import environ
 import os
 from pathlib import Path
 
@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7unp%s)fa*2$*ecl+lz#c4$y_d&!8mk@jrnw9k%pdb#__3x+zv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['health-center-22.azurewebsites.net']
+ALLOWED_HOSTS = []  # 'health-center-22.azurewebsites.net'
 
 
 # Application definition
@@ -52,19 +52,19 @@ INSTALLED_APPS = [
 ]
 
 
-env = environ.Env()
-environ.Env.read_env()
+# env = environ.Env()
+# environ.Env.read_env()
 
-# Previous settings ...
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+# # Previous settings ...
+# #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = env('EMAIL_HOST')
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
-# Custom setting. To email
-RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
+# # Custom setting. To email
+# RECIPIENT_ADDRESS = env('RECIPIENT_ADDRESS')
 
 
 MIDDLEWARE = [
@@ -104,8 +104,13 @@ WSGI_APPLICATION = 'root.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django',
+        'USER': 'omar@health-center-22-db',
+        'PASSWORD': 'Welcome@1',
+        'HOST': 'health-center-22-db.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
 
