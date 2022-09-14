@@ -1,5 +1,5 @@
 # Summer-training-22
-
+## Idea and Functionality
 Our project is about a health center through which patients can register an appiontment with the different sections in the health center. 
 <br>
 Doctors can share there tips and news through posts on the website.
