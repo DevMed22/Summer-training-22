@@ -10,7 +10,7 @@ We used Django as the main backend framework and and for the  frontend we used b
 <br><br>
 We have built a deep learning model to help us in .....
 <br><br>
-We deployed our project and hosted it on Microsoft Azure and you can check the live version through this link(......)
+We deployed our project and hosted it on Microsoft Azure and you can check the live version on [Microsoft Azure](https://health-center-22.azurewebsites.net/)
 <br><br>
 We are using GitHub Actions to automate testing whenever new push or pull request are made to the main branch.
 you can find the workflow automation file inside this [directory](https://github.com/DevMed22/Summer-training-22/tree/main/.github/workflows) .
