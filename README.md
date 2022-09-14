@@ -28,5 +28,7 @@ We deployed our project and hosted it on Microsoft Azure and you can check the l
 ## GitHub Actions and Automation
 We are using GitHub Actions to automate testing whenever new push or pull request are made to the main branch.
 you can find the workflow automation file inside this [directory](https://github.com/DevMed22/Summer-training-22/tree/main/.github/workflows) .
+<br>
+You can check workflow history and see the magic [here](https://github.com/DevMed22/Summer-training-22/actions)
 <br><br>
 install project requirements throgh file Requirements.txt 
