@@ -5,3 +5,4 @@ django-crispy-forms
 whitenoise
 psycopg2-binary
 environ
+Pillow

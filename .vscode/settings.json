@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2f877dfb-7723-454f-a8b8-911c3a3cce5c/microsoft.web/sites/subscriptions/2f877dfb-7723-454f-a8b8-911c3a3cce5c/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Health-Center-22",
+    "appService.deploySubpath": "."
+}
