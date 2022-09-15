@@ -44,7 +44,7 @@ Note: to run machine learning model(Covid-19), you need to run it on different p
 ### Team work load
 - Ahmed Tarek ->  [Machine Learning models](https://github.com/DevMed22/Summer-training-22/tree/main/AI), Flask (Deployment of Covid-19 and Blood-Cells), Streamlit (Deployment of cell-organnel-object-segmentation)
 - Amr Atef -> Django (backend of Health-Center-22), integrating Machine learning models inside Health-Center-22
-- Omar Elsherif -> Django (Backend of Health-Center-22), [GitHub Actions](https://github.com/DevMed22/Summer-training-22/tree/main/.github/workflows) (automation of django testing and Continuous Integration with Azure), Hosting on Azure 
+- Omar Elsherif -> Django (Backend of Health-Center-22), [GitHub Actions](https://github.com/DevMed22/Summer-training-22/tree/main/.github/workflows) (automation of django testing and Continuous Integration with Azure), [Hosting on Azure](https://health-center-22.azurewebsites.net/)
 - Mohamed Tabana -> Django (Backend of task [HIS-Pathology](https://github.com/DevMed22/Summer-training-22/tree/main/HIS-Pathology))
 - Esmael Mosad -> Frontend of Health-Center-22 using HTML, CSS, JavaScript, Bootstrap
 - Yasmine Yasser -> Frontend of task [HIS-Pathology](https://github.com/DevMed22/Summer-training-22/tree/main/HIS-Pathology)
