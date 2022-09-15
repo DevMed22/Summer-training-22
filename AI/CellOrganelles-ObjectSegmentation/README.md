@@ -16,7 +16,14 @@ The approach for 3D volumes is similar to the one described for 2D, using pairs 
 ![](https://github.com/stardist/stardist/raw/master/images/overview_3d.png)
 
 ## Our App
+To use our app:
+- Upload the image you want to test from your local device
+ -- Note : the image should be a pathology image for tissues
+- click on the submit button
 
+![](https://github.com/DevMed22/Summer-training-22/blob/main/AI/CellOrganelles-ObjectSegmentation/images/star.png)
+
+### Thanks for your time 😊
 
 ## Resources
 [StarDist](https://github.com/stardist/stardist)
