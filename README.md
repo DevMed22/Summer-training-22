@@ -11,7 +11,7 @@ Through our system, we make health care better as patients can see available tim
 We used Django as the main backend framework and for the  frontend we used bootstrap. 
 <br><br>
 ## Machine Learning
-We have built several deep learning models to help us in our system and you can check them in [AI](https://github.com/DevMed22/Summer-training-22/tree/main/AI) directory.
+We have built several deep learning models to help us in our system and you can check them in [AI directory](https://github.com/DevMed22/Summer-training-22/tree/main/AI) directory.
 We have 4 models:
 - Covid-19_Detection model is the one we deployed inside our main project. You can use it to upload image and check if the the case has Covid-19 or not.
 - CellOrganelles-ObjectSegmentation model is the one we deployed inside HIS-Pathology task. You can upload an image and make a segmentation of the organelles inside the blood.
