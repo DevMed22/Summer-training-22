@@ -1,5 +1,6 @@
 # Summer-training-22
 ## Idea and Functionality
+![Website home](https://github.com/DevMed22/Summer-training-22/blob/ebfd737c194fe55d74a1e52c0886932b7d02a429/Project-Screenshots/health-center/1.png)
 Our project is about a health center through which patients can register an appiontment with the different sections in the health center. 
 <br>
 Doctors can share there tips and news through posts on the website.
@@ -7,6 +8,7 @@ Doctors can share there tips and news through posts on the website.
 Through our system, we make health care better as patients can see available times in the section and book it. Also doctors can know details about their patients before the come to health center and all data will be stored to come back to it when needed.
 <br><br>
 We have used deep learning model to help patient diagnose his case with intial result before visiting the Doctor. You can find it named [Covid-19](https://github.com/DevMed22/Summer-training-22/tree/main/AI/Covid-19_Detection)
+![Covid-19](https://github.com/DevMed22/Summer-training-22/blob/ebfd737c194fe55d74a1e52c0886932b7d02a429/Project-Screenshots/health-center/7.png)
 
 ## Backend and Frontend
 We used Django as the main backend framework and for the  frontend we used bootstrap. 
@@ -20,10 +22,14 @@ We have 4 models:
 - cells-object-detection model 
 <br>
 We have used Flask, Streamlit to deploy our models and Tensorflow, SKlearn, Numpy, Pandas and Matplotlib for buidling our models.
-<br><br>
+
+![cell-segmentation](https://github.com/DevMed22/Summer-training-22/blob/ebfd737c194fe55d74a1e52c0886932b7d02a429/Project-Screenshots/HIS-Pathology/Machine%20Learning/3.png)
+
+<br>
 
 ## Hosting
 We deployed our project and hosted it on Microsoft Azure and you can check the live version on [Microsoft Azure](https://health-center-22.azurewebsites.net/)
+![Azure hosting](https://github.com/DevMed22/Summer-training-22/blob/ebfd737c194fe55d74a1e52c0886932b7d02a429/Project-Screenshots/Hosting-GitHub_Action/azure%20portal%20-%20Health-Center-22.png)
 <br><br>
 
 ## GitHub Actions and Automation
@@ -31,6 +37,7 @@ We are using GitHub Actions to automate testing whenever new push or pull reques
 you can find the workflow automation file inside this [directory](https://github.com/DevMed22/Summer-training-22/tree/main/.github/workflows) .
 <br>
 You can check workflow history and see the magic [here](https://github.com/DevMed22/Summer-training-22/actions)
+![GitHub Actions](https://github.com/DevMed22/Summer-training-22/blob/ebfd737c194fe55d74a1e52c0886932b7d02a429/Project-Screenshots/Hosting-GitHub_Action/GitHub%20Actions%20-%20run.png)
 <br><br>
 
 ## Steps to run Django Project
