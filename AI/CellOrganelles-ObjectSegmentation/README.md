@@ -17,6 +17,8 @@ The approach for 3D volumes is similar to the one described for 2D, using pairs 
 
 ## Our App
 To use our app:
+- install streamlit library
+- Open the terminal and go to the directory where your model file is in , then write "streamlit run 'file-name.py' "
 - Upload the image you want to test from your local device
  -- Note : the image should be a pathology image for tissues
 - click on the submit button
